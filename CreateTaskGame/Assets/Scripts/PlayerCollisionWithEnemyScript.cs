@@ -20,7 +20,7 @@ public class PlayerCollisionWithEnemyScript : MonoBehaviour
     // player gameobject
     public GameObject player;
     // player controller
-    private PlayerController PC;
+    //private PlayerController PC;
     // death animation for the player
     public Animator transition;
     public AnimationClip[] clip;
@@ -38,7 +38,7 @@ public class PlayerCollisionWithEnemyScript : MonoBehaviour
     void Start()
     {
         playerRB = player.GetComponent<Rigidbody2D>();
-        PC = player.GetComponent<PlayerController>();
+        //PC = player.GetComponent<PlayerController>();
         effects = particles.GetComponent<ParticleSystem>();
         reset = false;
         clip = transition.runtimeAnimatorController.animationClips;
@@ -63,10 +63,6 @@ public class PlayerCollisionWithEnemyScript : MonoBehaviour
         enemy = collision.gameObject;
         if (enemy.CompareTag("Enemy") || enemy.CompareTag("SpikesObject"))
         {
-            PC.myAnim.SetBool("Walk", false);
-            PC.myAnim.SetBool("Jump", false);
-            PC.myAnim.SetBool("Dash", false);
-            PC.myAnim.SetBool("WallSlide", false);
             StartCoroutine(death());
             reset = true;
         }
@@ -74,9 +70,8 @@ public class PlayerCollisionWithEnemyScript : MonoBehaviour
 
     IEnumerator death()
     {
-        //reset = false;
         transition.SetTrigger("Start");
-        PC.enabled = false;
+        //PC.enabled = false;
         playerRB.bodyType = RigidbodyType2D.Static;
         yield return new WaitForSeconds(time);
         player.transform.position = respawn.transform.position;
@@ -86,7 +81,7 @@ public class PlayerCollisionWithEnemyScript : MonoBehaviour
         playerRB.bodyType = RigidbodyType2D.Dynamic;
         reset = false;
         yield return new WaitForSeconds(time);
-        PC.enabled = true;
+        //PC.enabled = true;
         transition.SetTrigger("Reset");
 
     }
