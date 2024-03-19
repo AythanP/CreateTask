@@ -20,42 +20,26 @@ public class PlayerCollisionWithEnemyScript : MonoBehaviour
     // player gameobject
     public GameObject player;
     // player controller
-    //private PlayerController PC;
-    // death animation for the player
+    private PlayerController PC;
+    // fade animation for the artifact
     public Animator transition;
-    public AnimationClip[] clip;
     // how long the wait between transitions are
-    private float time;
+    private float time = 1f;
     // particles to spawn upon death
     public GameObject particles;
     // to control if the particles can play or not
     private ParticleSystem effects;
     [HideInInspector]
-    // to reset every single game object
+    // to reset every single game object other than the player
     public bool reset;
 
     // Start is called before the first frame update
     void Start()
     {
         playerRB = player.GetComponent<Rigidbody2D>();
-        //PC = player.GetComponent<PlayerController>();
+        PC = player.GetComponent<PlayerController>();
         effects = particles.GetComponent<ParticleSystem>();
         reset = false;
-        clip = transition.runtimeAnimatorController.animationClips;
-
-        foreach (AnimationClip clip in clip)
-        {
-            // names will have to be set on a name by name basis, so when all the clips are the same length, like now, the cases are redundant. They're just there so I can pull this code for another script if I need to
-            switch (clip.name)
-            {
-                case "DeathAnimation-End":
-                    time = clip.length;
-                    break;
-                case "DeathAnimation-Start":
-                    time = clip.length;
-                    break;
-            }
-        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -70,19 +54,18 @@ public class PlayerCollisionWithEnemyScript : MonoBehaviour
 
     IEnumerator death()
     {
+        //reset = false;
         transition.SetTrigger("Start");
-        //PC.enabled = false;
+        PC.enabled = false;
         playerRB.bodyType = RigidbodyType2D.Static;
         yield return new WaitForSeconds(time);
         player.transform.position = respawn.transform.position;
         particles.transform.position = respawn.transform.position;
         transition.SetTrigger("End");
         effects.Play();
+        //yield return new WaitForSeconds(time);
         playerRB.bodyType = RigidbodyType2D.Dynamic;
+        PC.enabled = true;
         reset = false;
-        yield return new WaitForSeconds(time);
-        //PC.enabled = true;
-        transition.SetTrigger("Reset");
-
     }
 }

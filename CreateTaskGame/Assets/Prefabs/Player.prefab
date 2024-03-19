@@ -110,7 +110,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 623726241, guid: d2e287e54b18cf647a5413f5b79423fb, type: 3}
+  m_Sprite: {fileID: 194251132, guid: b632fdfde20117f42a330c01b2e7f121, type: 3}
   m_Color: {r: 0.5210975, g: 0.9811321, b: 0.44891423, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -203,7 +203,7 @@ Rigidbody2D:
   m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 3
-  m_Material: {fileID: 6200000, guid: 8a4a9e2428d774a4190f3646d6d43e1b, type: 2}
+  m_Material: {fileID: 6200000, guid: f8e2902fad6ef144b815820b0b2b3a1f, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -323,18 +323,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 100
-  airSpeed: 25
+  airSpeed: 20
   groundCheck: {fileID: 8397047255048113365}
   checkRadius: 0.1
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   extraJumps: 1
   jumpForce: 8
   jumpTime: 0.3
   gravityScale: 5
   groundDrag: 10
-  airDrag: 0.3
+  airDrag: 2
   jumpNoise: {fileID: 8300000, guid: a4afae4913008dd4da009439b7c8a59d, type: 3}
   whatIsLadder:
     serializedVersion: 2
