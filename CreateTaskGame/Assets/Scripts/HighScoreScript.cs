@@ -8,31 +8,38 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-// need a trigger to signal the end of the game and figure out how to have a list with infinite size (like realloc)
-// need to realloc memory when a new score is recorded and append that at the end of the list
-
 public class HighScoreScript : MonoBehaviour
 {
     TMP_Text myText;
+    GameManager gameManager;
     List<int> scores;
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = FindAnyObjectByType<GameManager>();
+        scores = gameManager.scores;
+        scores.Add(GameManager.score);
         myText = GetComponent<TMP_Text>();
         ChangeText();
         GameManager.ScoreUpdate.AddListener(ChangeText);
+        
     }
 
     private void ChangeText()
     {
-        myText.text = "High Score: " + GameManager.score;
+        myText.text = "High Score: " + highscore(scores);
+        for (int i = 0; i < scores.Count; i++)
+        {
+            print(scores[i]);
+        }
 
     }
     
-    void highscore(int []scores, int length)
+    // function to determine the highest score from a list of integers
+    int highscore(List<int> scores)
     {
         int max = 0;
-        length = scores.Length;
+        int length = scores.Count;
         for (int i = 0; i < length; i++)
         {
             if (scores[i] > max)
@@ -40,5 +47,6 @@ public class HighScoreScript : MonoBehaviour
                 max = scores[i];
             }
         }
+        return max;
     }
 }

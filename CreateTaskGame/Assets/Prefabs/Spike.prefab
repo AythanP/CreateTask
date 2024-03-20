@@ -43,7 +43,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4315886725890023216}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0afad04d2586a574c809613a896b740b, type: 3}
+  m_Script: {fileID: 11500000, guid: 86b44ddf6463f3745b49dbf590f81bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PCES: {fileID: 0}
@@ -285,14 +285,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 4681276892423811791}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a07fe5d0ad0694b4da0d2e20b48a587f, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c27fe56401e1214181c1f654098bf60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   deathTime: 1
   spike: {fileID: 5504283608863584023}
   spikeRB: {fileID: 5936934784904025278}
   PCES: {fileID: 0}
-  soundEffect: {fileID: 8300000, guid: b3599c2e76b3052459922736fe3a6783, type: 3}
+  soundEffect: {fileID: 8300000, guid: 8bfeb4665cfe6784db4c8cc049c35070, type: 3}
   SDS: {fileID: 1898532273499029082}
 --- !u!82 &1088383909575417851
 AudioSource:
@@ -468,7 +468,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a60c145e1b287024caec85670051a45c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4940cd6ccaa63cc4299af4ad20244da9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -560,15 +560,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5504283608863584023}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc3f573a566caed448f8b3346e9574d6, type: 3}
+  m_Script: {fileID: 11500000, guid: 7747eb8e02b847d4e810ce2081b3ca87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameO: {fileID: 0}
   mySpike: {fileID: 5504283608863584023}
-  particles: {fileID: 6932554134055184120, guid: 4cdcc855302b7ab4cabe821a53accfb9,
-    type: 3}
-  PS: {fileID: 4787512046402975687, guid: 4cdcc855302b7ab4cabe821a53accfb9, type: 3}
-  soundEffect: {fileID: 8300000, guid: 39020a55d2c942b418a11f1713b20294, type: 3}
+  particles: {fileID: 6932554134055184120, guid: 920f26f0f36e8414ca409c6223d64d44, type: 3}
+  soundEffect: {fileID: 8300000, guid: ff8b934396fda334bbcf0ebb7494ebaf, type: 3}
   hasBroken: 0
 --- !u!82 &2495978759688564206
 AudioSource:

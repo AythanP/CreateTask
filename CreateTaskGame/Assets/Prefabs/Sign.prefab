@@ -57,7 +57,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -7725857347326825000, guid: 6808309001433e2458dd04834c32e61d, type: 2}
+  - {fileID: -7725857347326825000, guid: 28813e3a84e854c48af3d5e79d6ed5eb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -103,9 +103,8 @@ MonoBehaviour:
 
     If you can read this good for you!'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6808309001433e2458dd04834c32e61d, type: 2}
-  m_sharedMaterial: {fileID: -7725857347326825000, guid: 6808309001433e2458dd04834c32e61d,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 28813e3a84e854c48af3d5e79d6ed5eb, type: 2}
+  m_sharedMaterial: {fileID: -7725857347326825000, guid: 28813e3a84e854c48af3d5e79d6ed5eb, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -252,8 +251,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7,
-    type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.14901961, g: 0.0627451, b: 0.007843138, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -273,7 +271,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2434005909244270860}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 934d57c1ec7d05f48997bde5b9688296, type: 3}
+  m_Script: {fileID: 11500000, guid: 4dbc701baaf11f943851a0f1b1c49a5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Text: {fileID: 2434005910281230610}
@@ -566,8 +564,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7,
-    type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.1509434, g: 0.064272664, b: 0.009255967, a: 1}
   m_FlipX: 0
   m_FlipY: 0

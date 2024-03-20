@@ -61,12 +61,6 @@ public class PlayerController : MonoBehaviour
     //animation
     private Animator myAnim;
 
-    // camera shake
-    public FollowCameraScript followCam;
-    // manipulate these values to change the intensity of the camera shake and how long it lasts
-    public float shakeAmount = 0f;
-    public float shakeDur = 0f;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -77,8 +71,6 @@ public class PlayerController : MonoBehaviour
         jumps = extraJumps;
 
         RespawnPoint = transform.position;
-
-        followCam = GameObject.FindObjectOfType<FollowCameraScript>();
     }
 
     //Update is called once per frame
@@ -98,12 +90,10 @@ public class PlayerController : MonoBehaviour
             if ((myRb.velocity.x < 0 && moveInputH > 0) || (myRb.velocity.x > 0 && moveInputH < 0))
             {
                 myRb.velocity = (Vector2.up * jumpForce);
-                followCam.StartShake(shakeDur, shakeAmount);
             }
             else
             {
                 myRb.velocity = (Vector2.up * jumpForce) + new Vector2(myRb.velocity.x, 0);
-                followCam.StartShake(shakeDur, shakeAmount);
             }
             jumpPressed = true;
         }
@@ -114,12 +104,10 @@ public class PlayerController : MonoBehaviour
             if ((myRb.velocity.x < 0 && moveInputH > 0) || (myRb.velocity.x > 0 && moveInputH < 0))
             {
                 myRb.velocity = (Vector2.up * jumpForce);
-                followCam.StartShake(shakeDur, shakeAmount);
             }
             else
             {
                 myRb.velocity = (Vector2.up * jumpForce) + new Vector2(myRb.velocity.x, 0);
-                followCam.StartShake(shakeDur, shakeAmount);
             }
             jumpPressed = true;
             jumps--;

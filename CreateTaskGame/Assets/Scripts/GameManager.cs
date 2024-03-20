@@ -1,6 +1,8 @@
 /*****************************************
- * Edited by: Ryan Scheppler
- * Last Edited: 1/27/2021
+ * Original author: Ryan Scheppler
+ * Created: 1/27/2021
+ * Edited by: Aythan Pao
+ * Edited: 3-20-24
  * Description: Should be on it's own game object likely alone, only one will exist at a time, handles variables and events more global affecting
  * *************************************/
 using System.Collections;
@@ -18,6 +20,10 @@ public class GameManager : MonoBehaviour
 
     //score property and int behind it
     private static int _score = 0;
+
+    // list of scores
+    public List<int> scores;
+
     public static int score
     {
         get
@@ -35,6 +41,7 @@ public class GameManager : MonoBehaviour
     //when made make sure this is the only manager, and make the manager persistant through levels
     private void Awake()
     {
+        scores = new List<int>();
         if (Instance == null)
         {
             Instance = this;
