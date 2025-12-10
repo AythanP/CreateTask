@@ -11,3 +11,9 @@ by my instructor. The objects that primarily make up this game and allow it to f
 * A tilemap to act as the ground (Custom)
 * Mario-style camera utilizing CinemachineBrain and some scripting (Custom)
 
+## User Installation Guide
+
+1. Clone this repository
+2. Open the Unity Hub app and select "Add from repository" under "Add"
+3. Select the project and click "Next"
+4. Follow 
