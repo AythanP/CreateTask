@@ -16,4 +16,6 @@ by my instructor. The objects that primarily make up this game and allow it to f
 1. Clone this repository
 2. Open the Unity Hub app and select "Add from repository" under "Add"
 3. Select the project and click "Next"
-4. Follow 
+4. Specify which directory/folder the project should be downloaded in
+
+Once the project is downloaded, it should appear in your Unity Hub. Click the project to open it.
