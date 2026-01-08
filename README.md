@@ -28,4 +28,4 @@ by my instructor. The objects that primarily make up this game and allow it to f
 
 ### Running the Project
 
-Click the project to open it. Click "Play", located at the top of the Unity project. 
+Click the project to open it. Click "Play", located at the top of the Unity editor. 
