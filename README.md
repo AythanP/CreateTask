@@ -13,9 +13,9 @@ by my instructor. The objects that primarily make up this game and allow it to f
 
 ## User Installation Guide
 
-1. Clone this repository
-2. Open the Unity Hub app and select "Add from repository" under "Add"
-3. Select the project and click "Next"
-4. Specify which directory/folder the project should be downloaded in
+1. Clone this repository by clicking on "Code", copying the URL to your clipboard, then going to your GitHub Desktop app, clicking "Add", "Clone Repository", "URL", pasting the URL into the first field, and choose where the repository should be stored on your device for the second field. Click "Clone". You should see a folder called "CreateTask" in whatever place you chose for the second field.
+3. Open the Unity Hub app and select "Add project from disk" under "Add"
+4. Go to the GitHub folder you just downloaded, and find the folder containing all of the Unity assets. 
+5. Click on that folder. The project should now appear on your list of project in the UnityHub app. 
 
-Once the project is downloaded, it should appear in your Unity Hub. Click the project to open it.
+Click the project to open it.
